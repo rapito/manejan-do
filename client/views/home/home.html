@@ -1,0 +1,24 @@
+<template name="home">
+
+    {{#if currentUser}}
+    <div class="row">
+        <form>
+            <div class="input-field col s12 center">
+                <select id="select-post-filter">
+                    <option value="all">{{_ 'status_all'}}</option>
+                    <option value="available">{{_ 'status_available'}}</option>
+                    <option value="pending">{{_ 'status_pending'}}</option>
+                    <option value="hidden">{{_ 'status_hidden'}}</option>
+                </select>
+                <label>{{_ 'status_filter'}}</label>
+            </div>
+        </form>
+    </div>
+    {{/if}}
+
+    <div class="posts-container center row">
+        {{> pagesNav}}
+        {{> pages}}
+    </div>
+
+</template>

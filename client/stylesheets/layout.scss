@@ -1,0 +1,30 @@
+@import "colors";
+@import "mixings";
+
+nav.page-nav {
+	@extend .color-primary;
+}
+
+footer.page-footer {
+	@extend .color-primary;
+}
+
+body {
+	background-color: $color-back;
+	@include respond-to(handhelds) { 
+		background-color: $color-back-mobile;
+	}
+}
+
+#nav-mobile.side-nav {
+	li a {
+
+		padding-top: 10px;
+
+		i {
+			float: left;
+			margin-right: 5px;
+			padding-top: 9px;
+		}
+	}
+}

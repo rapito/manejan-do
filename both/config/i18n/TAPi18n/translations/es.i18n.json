@@ -1,0 +1,50 @@
+{
+  "log_out": "Cerrar Sesión",
+  "submit": "Enviar",
+  "save_error": "Error saving: %s",
+
+  "laws": "Leyes/Articulos",
+  "law": "Artículo",
+  "law_new": "Agregar Artículo",
+  "law_saved": "Artículo Guardado!",
+  "law_delete?": "Borrar artículo %s ?",
+  "law_deleted": "Artículo Eliminado!",
+  "law_loading_title": "Cargando Título de Artículo...",
+  "law_loading_desc": "Cargando Descripción...",
+
+  "status_all": "Todos",
+  "status_available": "Disponible",
+  "status_pending": "Pendiente",
+  "status_hidden": "Oculto",
+  "status_filter": "Filtrar Publicaciones",
+
+  "posts": "Publicaciones",
+  "post": "Publicación",
+  "post_new": "Reportar",
+  "post_add": "Nuevo Reporte",
+  "post_saved": "Reporte creado, gracias!",
+  "post_copied": "Enlace copiado al portapapeles!",
+  "post_delete?": "¿Borrar Reporte %s?",
+  "post_deleted": "¡Reporte Eliminado!",
+  "post_set_hidden?": "¿Desea ocultar la publicación %s?",
+  "post_set_visible?": "¿Desea mostrar la publicación %s?",
+  "post_set_available?": "¿Desea cambiar el estado de esta publicación a 'Disponible'?",
+  "post_set_pending?": "¿Desea cambiar el estado de esta publicación a 'Pendiente'?",
+  "post_status_updated": "!El estado ha sido actualizado!",
+  "post_visibility_updated": "¡Publicación Actualizada!",
+
+  "post_share_desc_default": "Mira que chofer mas temerario.",
+
+  "post_form_laws": "Artículos/Leyes Quebrantadas",
+  "post_form_file": "Elegir Archivo",
+
+  "form_required": "El campo [label] es requerido",
+  "form_required_c": "Este campo es requerido",
+
+  "media_add": "Agregar Media",
+
+  "_name": "Nombre",
+  "_desc": "Descripción",
+  "_location": "Ubicación",
+  "_tags": "Tags"
+}

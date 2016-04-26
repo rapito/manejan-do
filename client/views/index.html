@@ -1,0 +1,45 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicons/icon.png">
+
+    <!--Import Google Icon Font (Materialize) -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/vendor/mdi/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!--Clipboard-->
+    <script type="text/javascript" src="/vendor/clipboard/dist/clipboard.min.js"></script>
+
+    <!--Slick Slider-->
+    <link rel="stylesheet" type="text/css" href="/vendor/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/slick-carousel/slick/slick-theme.css" />
+    <script type="text/javascript" src="/vendor/slick-carousel/slick/slick.min.js"></script>
+
+    <!--TokenInput for Tags-->
+    <script type="text/javascript" src="/vendor/jquery-tokeninput/build/jquery.tokeninput.min.js"></script>
+
+    <script src="/i18n/moment/es.js">
+
+    </script>
+
+
+    <!--FB setup TODO: append with js file-->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId      : '572175922936865',
+            xfbml      : true,
+            version    : 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+</head>

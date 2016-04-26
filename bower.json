@@ -1,0 +1,27 @@
+{
+  "name": "Manejan.do",
+  "version": "0.0.0",
+  "homepage": "https://bitbucket.org/manejan-do/md-web",
+  "authors": [
+    "Robert Peralta",
+    "Randy Gonzalez"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "vendor",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-tokeninput": "rapito/jquery-tokeninput#callbacks",
+    "slick-carousel": "~1.5",
+    "mdi": "~0.5",
+    "clipboard": "~1.5"
+  },
+  "ignoredDependencies": [
+    "jquery"
+  ]
+}

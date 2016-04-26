@@ -1,0 +1,90 @@
+<template name="PostsNew">
+    <div class="container post-new-container">
+
+        <div class="card-panel">
+            <h5>{{_ 'post_add'}}</h5>
+            {{#autoForm collection="Complaints.coll" id="insertComplaintForm" type="insert"}}
+
+                <div class="row">
+                    <div class="section">
+
+                        <div id="media-container" class="col s12">
+                            <div id="media-slider-container">
+
+                            </div>
+                        </div>
+
+                        <div class="col s12">
+                            <div class="progress">
+                                <div class="indeterminate"></div>
+                            </div>
+                        </div>
+
+                        <div class="col s12">
+                            <button id="btn-add-media" class="btn waves-effect waves-light">
+                                {{_ 'media_add'}}
+                                <i class="material-icons right">add</i>
+                            </button>
+
+                        </div>
+
+                        <div id="form-media" class="col s12 hidden">
+                            {{> afQuickField name="media" onUploaded=onFileUploaded}}
+                        </div>
+                    </div>
+
+                    {{> divider}}
+
+                    <div class="section">
+                        <div class="col s12">
+                            {{> afQuickField name='description' label=descLabel rows=1}}
+                        </div>
+
+                        <div class="col s12">
+                            {{> afQuickField name='laws' label=lawsLabel type='text'}}
+                        </div>
+
+                        <div class="col s2">
+                            <a class="btn-floating btn-location btn-large waves-effect waves-light">
+                                <i class="material-icons">
+                                    {{locationIcon}}
+                                </i>
+                            </a>
+                        </div>
+                        <div class="col s10 {{locationClass}}">
+                            {{> afQuickField name="location" label=locationLabel type='map' geolocation='true' autlocate='true'}}
+                        </div>
+                    </div>
+
+                    {{> divider}}
+
+                    <div class="section">
+                        <div class="col s12">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">
+                                {{_ 'submit'}}
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {{/autoForm}}
+
+        </div>
+
+    </div>
+</template>
+
+<template name="uploadedImage">
+    <div class="uploaded-media-box">
+        <img class="uploaded-media-img" src="{{this}}">
+    </div>
+</template>
+
+<template name="mediaPreview">
+    <a href="{{file.url}}">{{file.original.name}}</a> {{src}}
+    <br/> {{filename}}
+    <br/> {{absoluteSrc}}
+    <br/> {{this.url}}
+    <br/> {{this}}
+    <img src="{{url}}" alt="" class="img-fileUpload-thumbnail img-thumbnail img-rounded" download='{{filename}}'>
+</template>

@@ -1,0 +1,175 @@
+// Variables  // -----------------------------------
+
+@size-border-radius: 5px;
+@size-search-margin: 3px;
+
+// Colors // -----------------------------------
+
+@col-token-input-bg: rgba(255, 255, 255, 0.5);
+@col-container-bg: #F9F9F9;
+@col-container-border: #E8E8E8;
+@col-border-idle: #8496ba;
+
+// Tag selected
+@col-tag-bg-selected: #FF9B69;
+@col-tag-border-selected: #FF9B69;
+@col-tag-text-selected: white;
+@col-tag-text-shadow-selected: #df8163;
+
+//Tag idle
+@col-tag-bg-idle: #FF7777;
+@col-tag-border-idle: #FF7777;
+@col-tag-text-idle: white;
+@col-tag-text-shadow-idle: #DF5757;
+
+// Dropdown items idle
+@col-dd-item-bg-idle: @col-container-bg;
+@col-dd-item-text-idle: @col-container-bg;
+@col-dd-item-shadow-selected: rgba(0, 0, 0, 0);
+
+// Dropdown items selected
+@col-dd-item-bg-selected: @col-tag-bg-selected;
+@col-dd-item-text-selected: @col-tag-text-selected;
+@col-dd-item-text-shadow-selected: #DF5757;
+
+// Dropdown search
+@col-dd-search-bg: white;
+@col-dd-search-text: gray;
+@col-dd-search-item-bg: white;
+
+// tokeninput : Manejan.do style
+ul.token-input-list-manejando {
+
+  border: 1px solid @col-container-border;
+  background-color: @col-container-bg;
+  border-radius: @size-border-radius;
+  -webkit-border-radius: @size-border-radius;
+  overflow: hidden;
+  height: auto !important;
+  height: 1%;
+  width: 100%;
+  cursor: text;
+  font-size: 12px;
+  font-family: Verdana, sans-serif;
+  min-height: 1px;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  clear: left;
+
+  li input {
+    background-color: @col-token-input-bg;
+    border: 0;
+    width: 100px;
+    padding: 3px 8px;
+    margin: 2px 0;
+    -webkit-appearance: caret;
+  }
+
+}
+
+li.token-input-token-manejando {
+
+  background-color: @col-tag-bg-idle;
+  border: 1px solid @col-tag-border-idle;
+  color: @col-tag-text-idle;
+  text-shadow: 0 1px 0 @col-tag-text-shadow-idle;
+  overflow: hidden;
+  height: auto !important;
+  height: 15px;
+  margin: 3px;
+  padding: 1px 3px;
+  cursor: default;
+  font-size: 11px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  float: left;
+  white-space: nowrap;
+
+  p {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+
+  // todo: check whether this is used or not
+  span {
+    color: #f1ec17;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+}
+
+li.token-input-selected-token-manejando {
+  color: @col-tag-text-selected;
+  background-color: @col-tag-bg-selected;
+  border: 1px solid @col-tag-border-selected;
+  text-shadow: 0 1px 0 @col-tag-text-shadow-selected;
+}
+
+li.token-input-input-token-manejando {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+div.token-input-dropdown-manejando {
+
+  background-color: @col-dd-search-bg;
+  border-bottom-left-radius: @size-border-radius;
+  border-bottom-right-radius: @size-border-radius;
+  -webkit-border-bottom-left-radius: @size-border-radius;
+  -webkit-border-bottom-right-radius: @size-border-radius;
+  //  border-left: 1px solid #ccc;
+  //  border-right: 1px solid #ccc;
+  //  border-bottom: 1px solid #ccc;
+  position: absolute;
+  //  width: 50%;
+  overflow: hidden;
+  cursor: default;
+  font-size: 11px;
+  font-family: Verdana, sans-serif;
+  z-index: 1;
+
+  p {
+    color: @col-dd-search-text;
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      background-color: @col-dd-search-item-bg;
+      padding: 3px;
+      margin: 0;
+      list-style-type: none;
+
+      em {
+        font-weight: bold;
+        font-style: normal;
+      }
+    }
+
+    li.token-input-dropdown-item-manejando {
+      background-color: @col-dd-item-bg-idle;
+    }
+    li.token-input-dropdown-item2-manejando {
+      background-color: @col-dd-item-bg-idle;
+    }
+
+    li.token-input-selected-dropdown-item-manejando {
+      background-color: @col-dd-item-bg-selected;
+      color: @col-dd-item-text-selected;
+      text-shadow: 0 1px 0 @col-dd-item-text-shadow-selected;
+    }
+  }
+}

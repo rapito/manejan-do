@@ -1,0 +1,2 @@
+@PostsController = AppController.extend
+  data: {}

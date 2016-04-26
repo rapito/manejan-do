@@ -1,0 +1,98 @@
+<template name="LawsSearch">
+    <div class="container-law-search">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s9">
+                        <input id="search-laws" type="search">
+                        <label for="search">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <i class="material-icons">close</i>
+                    </div>
+                    <div class="input-field col s3">
+                        <button id="btn-law-new" type="button" class="waves-effect waves-light btn">
+                            <i class="material-icons left">add</i>
+                            {{_ 'law'}}
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col s12 center">
+            {{> LawsResult laws=laws}}
+        </div>
+
+        <!--TODO: this should be a template-->
+        <div id="modal-selected-law" class="modal modal-fixed-footer">
+            <div class="modal-content">
+
+                <h4>
+                    {{#if selectedLaw}}
+                        {{_ 'law'}} - {{selectedLaw.name}}
+                    {{else}}
+                        {{_ 'law_new'}}
+                    {{/if}}
+                </h4>
+
+                {{> quickForm collection=Laws id="form-law" type=formType doc=selectedLaw omitFields=omitFields }}
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
+                    {{selectedLaw.saveLabel}}
+                </a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="selectedLawModal">
+    <div id="modal-selected-law" class="modal modal-fixed-footer">
+        <div class="modal-content">
+
+            <h4>
+                {{#if selectedLaw}}
+                    {{_ 'law'}} - {{selectedLaw.name}}
+                {{else}}
+                    {{_ 'law_new'}}
+                {{/if}}
+            </h4>
+
+            {{> quickForm collection=Laws id="form-law" type=formType doc=selectedLaw omitFields=omitFields }}
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
+                {{selectedLaw.saveLabel}}
+            </a>
+        </div>
+    </div>
+</template>
+
+<template name="LawsResult">
+    <table class="highlight centered">
+        <thead>
+        <tr>
+            <th data-field="name">{{_ '_name'}}</th>
+            <th data-field="description">{{_ '_desc'}}</th>
+            <th data-field="tags">{{_ '_tags'}}</th>
+            <th data-field="actions"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each laws}}
+            <tr class="row-law">
+                <td>{{name}}</td>
+                <td>{{description}}</td>
+                <td>{{tags}}</td>
+                <td>
+                    <a class="btn-floating btn-law-delete">
+                        <i class="material-icons">remove</i>
+                    </a>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>

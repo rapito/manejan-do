@@ -1,0 +1,1 @@
+@HomeController = AppController.extend(data: {})

@@ -1,0 +1,48 @@
+{
+  "kadira": { 
+    "appId": "<app_id>", 
+    "appSecret": "<app_secret>" 
+  },
+  "public": {
+    "app": {
+      "title": "ManejanDO",
+      "version": "0.0.0"
+    },
+    "services": {
+      "facebook": {
+        "app_id": "<app_id>"
+      },
+      "twitter": {
+        "owner_id": "<owner_id>"
+      }
+    }
+  },
+  "services": {
+    "repost": false,
+    "twitter": {
+      "owner_id": "<owner_id>",
+      "api_secret": "<api_secret>",
+      "api_key": "<api_key>",
+      "access_token": "<access_token>",
+      "access_token_secret": "<access_token_secret>"
+    },
+    "facebook": {
+      "oauth_key": "<oauth_key>",
+      "oauth_secret": "<oauth_secret>",
+      "api_key": "<api_key>",
+      "app_id": "<app_id>"
+    },
+    "instagram": {
+      "oauth_key": "<oauth_key>",
+      "oauth_secret": "<oauth_secret>",
+      "api_key": "<api_key>"
+    }
+  },
+  "seeds": {
+    "user": {
+      "username": "<username>",
+      "email": "<email>",
+      "password": "<password>"
+    }
+  }
+}

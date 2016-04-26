@@ -1,0 +1,20 @@
+@import "colors";
+@import "mixings";
+
+//search
+.container-law-search {
+
+  table.highlight > tbody > tr:hover {
+    background-color: $color-primary-light;
+    cursor: pointer;
+  }
+
+  .input-field input[type=search] ~ .mdi-navigation-close, .input-field input[type=search] ~ .material-icons {
+    top: 10px;
+  }
+
+  .input-field input[type=search]:focus {
+    background-color: $color-back-dark;
+  }
+
+}

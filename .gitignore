@@ -1,0 +1,16 @@
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+dump
+settings.json
+packages/schnie:vulcanize/
+public/vendor/
+
+.idea/
+.vscode/
+
+**/node_modules/
+
+.meteor/local
+
+#packages/*/

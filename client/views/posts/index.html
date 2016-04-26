@@ -1,0 +1,90 @@
+<template name="Post">
+    <div class="col s12 center">
+        <div class="post-container-index">
+
+            <article class="card {{unavailableClass}} left-align">
+                <div id="card-media-{{_id}}" class="card-image">
+                    {{#each media}}
+                        <div class="post-media-index-box">
+                            <img class="post-media-index" data-lazy="{{imgUrl this}}">
+                        </div>
+                    {{/each}}
+                </div>
+
+                {{#if currentUser}}
+                    <div class="right">
+                        <a class="btn-floating btn-post-delete  {{ extraMarginClass }} ">
+                            <i class="material-icons">remove</i>
+                        </a>
+
+                        {{#if showVisibility}}
+                        <a class="btn-floating btn-post-visibility {{ extraMarginClass }} ">
+                            <i class="material-icons">visibility</i>
+                        </a>
+                        {{/if}}
+                    </div>
+                {{/if}}
+
+
+                <div class="card-content card-btns">
+                    <span class="card-title grey-text text-darken-4">
+                        <a class="btn-location waves-effect waves-circle waves-teal btn-icon teal-text {{hasLocation}}">
+                            <i class="small material-icons">location_on</i>
+                        </a>
+                        <div class="btn-dislike right">
+                            <a class="waves-effect waves-circle waves-red btn-icon {{dislikedClass}}">
+                                <i class="small material-icons ">thumb_down</i>
+                            </a>
+                            <span class="{{dislikedClass}} right">{{dislikes}}</span>
+                        </div>
+                        
+                        <div class="fixed-action-btn horizontal btn-share right click-to-toggle">
+                            <a class="waves-effect waves-circle waves-grey btn-icon black-text">
+                                <i class="small material-icons">share</i>
+                            </a>
+                            <ul>
+                                <li><a class="btn-share-fb btn-floating indigo"><i class="mdi mdi-facebook"></i></a>
+                                </li>
+                                <li><a target="_blank" href="{{twitterShare this}}"
+                                       class="btn-share-twitter btn-floating blue"><i class="mdi mdi-twitter"></i></a>
+                                </li>
+                                <li><a data-clipboard-text="{{urlFor 'posts.show' _id=this._id }}"
+                                       class="btn-share-link btn-floating brown"><i class="mdi mdi-link"></i></a></li>
+                            </ul>
+                        </div>
+                        
+                    </span>
+                </div>
+                <div class="card-action grey lighten-4">
+                    <div class="post-desc-date right">
+                        {{#if currentUser}}
+                            <span class="post-status selectable">{{statusLabel}}</span>
+                        {{/if}} 
+                        {{livestamp createdAt}}
+                    </div>
+
+
+                    <p>{{this.description}}</p>
+
+                    <dv class="post-tags-index">
+                        <input type="text" id="input-cp-laws-{{_id}}" data-post-id="{{_id}}" name="cp-laws">
+                    </dv>
+
+                </div>
+
+                {{> postReveal}}
+            </article>
+        </div>
+    </div>
+</template>
+
+<template name="postReveal">
+    <div class="card-reveal" id="post-law-info-{{_id}}">
+        <span class="card-title grey-text text-darken-4">
+            <b id="">{{_ 'law_loading_title' }}</b>
+            <i class="material-icons right">close</i>
+        </span>
+
+        <p>{{_ 'law_loading_desc'}}</p>
+    </div>
+</template>

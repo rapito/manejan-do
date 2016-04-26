@@ -1,0 +1,15 @@
+@import "colors";
+@import "mixings";
+
+.brand-logo {
+  text-shadow: 0px 5px $color-primary-dark;
+}
+
+#title {
+  font-weight: bold;
+}
+
+#title-do {
+  font-weight: 100;
+  color: $color-secondary-light;
+}

@@ -1,0 +1,70 @@
+<template name="_header">
+    <nav class="page-nav">
+        <div class="nav-wrapper">
+            <div class="container">
+                <a class="brand-logo center" href="{{pathFor 'home'}}">
+                    <span id="title">MANEJAN<span></span></span><span id="title-do">DO</span>
+                </a>
+
+                <ul class="left hide-on-med-and-down">
+                    <li class="{{ isActiveRoute regex='home' }}">
+                        <a href="{{ pathFor 'home' }}" title="Home">
+                            {{> materialIcon name='home' }}
+                        </a>
+                    </li>
+                    <li class="{{ isActiveRoute regex='posts.new' }}">
+                        <a href="{{ pathFor 'posts.new' }}" title="{{_ 'post_new'}}">
+                            {{> materialIcon name='report_problem' }}
+                        </a>
+                    </li>
+                    {{#if currentUser}}
+                        <li class="{{ isActiveRoute regex='laws.search' }}">
+                            <a href="{{ pathFor 'laws.search' }}"
+                               title="{{_ 'laws'}}">{{> materialIcon name='turned_in' }}</a>
+                        </li>
+                    {{/if}}
+                </ul>
+                {{#if currentUser}}
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="{{ pathFor 'sign.out' }}" title="{{_ 'log_out'}}">
+                                {{> materialIcon name='power_settings_new' }}
+                            </a>
+                        </li>
+                    </ul>
+                {{/if}}
+
+                <a class="button-collapse" href="#" data-activates="nav-mobile">
+                    {{> materialIcon name='view_list' }}
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <ul id="nav-mobile" class="side-nav">
+        <li class="bold {{ isActiveRoute regex='home' }}">
+            <a href="{{ pathFor 'home' }}" title="Home">
+                {{> materialIcon name='home' }} Home
+            </a>
+        </li>
+        <li class="bold {{ isActiveRoute regex='posts.new' }}">
+            <a href="{{ pathFor 'posts.new' }}" title="{{_ 'post_new'}}">
+                {{> materialIcon name='report_problem' }} {{_ 'post_new'}}
+            </a>
+        </li>
+        {{#if currentUser}}
+            <li class="bold {{ isActiveRoute regex='laws.search' }}">
+                <a href="{{ pathFor 'laws.search' }}" title="{{_ 'laws'}}">
+                    {{> materialIcon name='turned_in' }} {{_ 'laws'}}
+                </a>
+            </li>
+
+            <li class="bold">
+                <a href="{{ pathFor 'sign.out' }}" title="{{_ 'log_out'}}">
+                    {{> materialIcon name='power_settings_new' }} {{_ 'log_out'}}
+                </a>
+            </li>
+        {{/if}}
+    </ul>
+
+</template>

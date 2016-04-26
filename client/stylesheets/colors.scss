@@ -1,0 +1,50 @@
+$color-primary: #526E9C;
+$color-primary-light: #8E9FBB;
+$color-primary-dark: #2A4673;
+
+$color-secondary: #26a69a;
+$color-secondary-light: #6FC7BF;
+
+$color-back: #EEEEEE;
+$color-back-dark: #BEBEBE;
+$color-back-mobile: #DEDEDE;
+
+
+$color-post-content: #F9F9F9;
+$color-post-unavailable: #EE6E73;
+
+.color-primary {
+  background-color: $color-primary;
+}
+
+.bg-primary {
+  background-color: $color-primary;
+}
+
+.bg-primary-light {
+  background-color: $color-primary-light;
+}
+
+.bg-secondary {
+  background-color: $color-secondary;
+}
+
+.bg-back {
+  background-color: $color-back;
+}
+
+.text-color-primary {
+  color: $color-primary;
+}
+
+.text-color-primary-light {
+  color: $color-primary-light;
+}
+
+.text-color-secondary {
+  color: $color-secondary;
+}
+
+.text-color-back {
+  color: $color-back;
+}

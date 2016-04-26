@@ -1,0 +1,9 @@
+[submodule "packages/meteor-autoform-file"]
+	path = packages/meteor-autoform-file
+	url = http://github.com/rapito/meteor-autoform-file
+[submodule "packages/meteor-autoform-map"]
+	path = packages/meteor-autoform-map
+	url = https://github.com/rapito/meteor-autoform-map
+[submodule "packages/meteor-twit"]
+	path = packages/meteor-twit
+	url = https://github.com/rapito/meteor-twit

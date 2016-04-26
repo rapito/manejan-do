@@ -1,0 +1,135 @@
+@import "colors";
+@import "mixings";
+
+$post-index-size: 640px;
+$post-new-size: 640px;
+$post-index-size-mobile: 100%;
+$post-new-size-mobile: 100%;
+
+$btn-size: 40px;
+$card-radius: 5px;
+
+@media screen and (max-width: 640px) {
+  * {
+    box-shadow: none !important;
+  }
+
+  .slick-list {
+    border-top-left-radius: $card-radius;
+    border-top-right-radius: $card-radius;
+  }
+  .post-container-index .card {
+    border-radius: $card-radius;
+
+  }
+  .post-container-index .card-action {
+    border-bottom-left-radius: $card-radius;
+    border-bottom-right-radius: $card-radius;
+  }
+}
+
+//Posts New
+.post-new-container {
+
+  .input-field label {
+    top: -1.25rem !important;
+  }
+
+  width: $post-new-size;
+  @include respond-to(handhelds) {
+    width: $post-new-size-mobile;
+  }
+}
+
+.uploaded-media-img {
+  max-width: $post-new-size;
+  width: 100%;
+  margin: auto 0;
+  @include respond-to(handhelds) {
+    max-width: $post-new-size-mobile;
+  }
+}
+
+//Posts Index
+.post-container-index {
+  width: $post-index-size;
+  margin: 0 auto;
+  @include respond-to(handhelds) {
+    width: $post-index-size-mobile;
+  }
+
+  .card.unavailable {
+    border-color: $color-post-unavailable;
+    border-style: solid;
+  }
+
+  .post-status {
+     font-weight: bold;
+  }
+  
+  @mixin btn-post-manage {
+    z-index: 999;
+    position: absolute;
+    margin-top: -20px;
+  }
+
+  .btn-post-extra-margin {
+    margin-top: -50px !important;
+  } 
+
+  .btn-post-visibility {
+    @include btn-post-manage();
+    margin-left: -90px;
+  } 
+
+  .btn-post-delete {
+    @include btn-post-manage();
+    margin-left: -40px;
+  }
+
+}
+
+.post-desc-date{
+  margin-top: -10px;
+  margin-right: 5px;
+
+  span {
+    font-style: italic;
+    font-size: 0.8em;
+  }
+}
+
+.btn-icon {
+  width: $btn-size;
+  height: $btn-size;
+  line-height: 2.2em;
+}
+
+// Fix shsare position
+.btn-share {
+  // margin-top: 5px;
+  position: relative;
+  display: inline-block;
+  // float: right;
+  padding: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  ul {
+    right: 30px !important;
+    top: 25% !important;
+  }
+
+}
+
+.btn-floating {
+  font-size: 0 !important;
+}
+
+// Align correctly our buttons inside the post card
+.card-btns {
+  padding: 3px 15px !important;
+  border-radius: 0 0 2px 2px !important;
+}
+
+//!Posts Index
