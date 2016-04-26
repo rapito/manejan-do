@@ -1,6 +1,6 @@
 # manejan-do
 
-Social network to reprot traffic violations on Dominican Republic
+Social network to report traffic violations on Dominican Republic
 
 http://manejandord.com/
 
