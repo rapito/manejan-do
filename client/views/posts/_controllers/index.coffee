@@ -132,11 +132,14 @@ initSlider = (post)->
 
 # Inits token-input law widgets
 initLaws = (post)->
+  laws = Complaints.getLaws(post._id, true)
+  laws = _.map laws, (law)->
+    $.extend law, {name: "Art. #{law.number}", _name: law.name}
   opts =
     theme: 'manejando'
     excludeCurrent: true
     onSelectedToken: showLawInfo
-    prePopulate: Complaints.getLaws(post._id, true)
+    prePopulate: laws
 
   inputTokenSelector = '.token-input-token-manejando'
 
@@ -152,7 +155,7 @@ showLawInfo = (element, law)->
   $title = $("#post-law-info-#{id} span b")
   $desc = $("#post-law-info-#{id} p")
 
-  $title.html(law.name)
+  $title.html("#{law.name} - #{law._name}")
   $desc.html(law.description)
 
 # inits clipboard.js for share links

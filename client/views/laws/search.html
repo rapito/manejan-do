@@ -83,8 +83,8 @@
         <tbody>
         {{#each laws}}
             <tr class="row-law">
-                <td>{{name}}</td>
-                <td>{{description}}</td>
+                <td>Art. {{number}}.- {{name}}</td>
+                <td>{{ truncate description 100 }}</td>
                 <td>{{tags}}</td>
                 <td>
                     <a class="btn-floating btn-law-delete">

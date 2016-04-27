@@ -44,6 +44,7 @@
   "media_add": "Agregar Media",
 
   "_name": "Nombre",
+  "_number": "Número",
   "_desc": "Descripción",
   "_location": "Ubicación",
   "_tags": "Tags"

@@ -15,10 +15,13 @@ class mdLaws extends BaseCollection
           label: T_('_name', null, TLanguage)
           type: String
           optional: true
+        number:
+          label: T_('_number', null, TLanguage)
+          type: String
+          optional: true
         description:
           label: T_('_desc', null, TLanguage)
           type: String
-          max: 300
           optional: true
         tags:
           type: [String]
@@ -34,14 +37,14 @@ class mdLaws extends BaseCollection
       if @coll.find().count() isnt 0
         return false
 
-      laws = [
-        {name: 'Art. 49', description: 'Descripción de Articulo 49', tags: ['Via Contraria', 'Contravia']}
-        {name: 'Art. 153', description: 'Descripción de Articulo 153', tags: ['Vidrios Tintados', 'Cristales Oscuros']}
-        {name: 'Art. 198', description: 'Descripción de Articulo 198', tags: ['No Estacione', 'Mal Parqueado']}
-      ]
+      # laws = [
+      #   {name: 'Art. 49', description: 'Descripción de Articulo 49', tags: ['Via Contraria', 'Contravia']}
+      #   {name: 'Art. 153', description: 'Descripción de Articulo 153', tags: ['Vidrios Tintados', 'Cristales Oscuros']}
+      #   {name: 'Art. 198', description: 'Descripción de Articulo 198', tags: ['No Estacione', 'Mal Parqueado']}
+      # ]
 
-      for law in laws
-        @coll.insert law
+      # for law in laws
+      #   @coll.insert law
 
       super()
     catch e
